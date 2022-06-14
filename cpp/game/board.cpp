@@ -196,7 +196,7 @@ bool Board::isLegal(Loc loc, Player pla, bool isMultiStoneSuicideLegal) const
   (void)isMultiStoneSuicideLegal;
   if(pla != P_BLACK && pla != P_WHITE)
     return false;
-  if(!( loc == PASS_LOC || (
+  if(!( /*loc == PASS_LOC ||*/ (
     loc >= 0 &&
     loc < MAX_ARR_SIZE &&
     (colors[loc] == C_EMPTY)
