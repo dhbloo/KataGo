@@ -81,6 +81,8 @@ static int handleSubcommand(const string& subcommand, const vector<string>& args
     return MainCmds::genconfig(subArgs,args[0]);
   else if(subcommand == "gtp")
     return MainCmds::gtp(subArgs);
+  else if(subcommand == "gom")
+    return MainCmds::gomprotocol(subArgs);
   else if(subcommand == "tuner")
     return MainCmds::tuner(subArgs);
   else if(subcommand == "match")
