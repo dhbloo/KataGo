@@ -216,7 +216,7 @@ bool Board::isLegal(Loc loc, Player pla) const
 {
   if(pla != P_BLACK && pla != P_WHITE)
     return false;
-  return loc == PASS_LOC || (
+  return (
     loc >= 0 &&
     loc < MAX_ARR_SIZE &&
     (colors[loc] == C_EMPTY) 

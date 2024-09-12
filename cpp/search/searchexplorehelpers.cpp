@@ -403,7 +403,7 @@ void Search::selectBestChildToDescend(
       continue;
 
     Loc moveLoc = NNPos::posToLoc(movePos,thread.board.x_size,thread.board.y_size,nnXLen,nnYLen);
-    if(moveLoc == Board::NULL_LOC)
+    if(moveLoc == Board::NULL_LOC || moveLoc == Board::PASS_LOC)
       continue;
 
     //Special logic for the root

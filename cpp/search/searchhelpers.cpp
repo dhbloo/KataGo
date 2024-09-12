@@ -224,6 +224,9 @@ double Search::getUtilityFromNN(const NNOutput& nnOutput) const {
 bool Search::isAllowedRootMove(Loc moveLoc) const {
   assert(moveLoc == Board::PASS_LOC || rootBoard.isOnBoard(moveLoc));
 
+  if(moveLoc == Board::PASS_LOC)
+    return false;
+
   if(searchParams.rootPruneUselessMoves &&
      rootHistory.moveHistory.size() > 0 
   ) {
