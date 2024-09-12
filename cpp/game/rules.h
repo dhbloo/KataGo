@@ -35,6 +35,9 @@ struct Rules {
   bool operator==(const Rules& other) const;
   bool operator!=(const Rules& other) const;
 
+  std::string getBasicRuleString() const { return writeBasicRule(basicRule); }
+  std::string getVCNRuleString() const { return writeVCNRule(VCNRule); }
+
   static std::set<std::string> basicRuleStrings();
   static std::set<std::string> VCNRuleStrings();
 
